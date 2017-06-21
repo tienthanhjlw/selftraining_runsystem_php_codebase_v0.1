@@ -9,6 +9,7 @@ class NewsController extends Controller
         echo '<pre>';
         print_r($this);
         echo '</pre>';
+        print_r($this->config->item('base_url'));
     }
 
     public function show()

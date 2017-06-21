@@ -19,6 +19,9 @@ class Controller
     */
     public function __construct()
     {
-
+        // Load cho config
+        require_once PATH_SYSTEM . '/core/loader/ConfigLoader.php';
+        $this->config = new ConfigLoader();
+        $this->config->load('config');
     }
 }
