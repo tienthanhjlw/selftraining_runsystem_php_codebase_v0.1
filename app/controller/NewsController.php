@@ -13,6 +13,8 @@ class NewsController extends Controller
 
         $this->library->load('upload');
         $this->library->upload->upload();
+        $this->helper->load('string');
+        echo stringToInt(' I love you');
     }
 
     public function show()
