@@ -31,5 +31,9 @@ class Controller
         // Load helper
         require_once PATH_SYSTEM . '/core/loader/HelperLoader.php';
         $this->helper = new HelperLoader();
+
+        // Load view
+        require_once PATH_SYSTEM . '/core/loader/ViewLoader.php';
+        $this->view = new ViewLoader();
     }
 }
