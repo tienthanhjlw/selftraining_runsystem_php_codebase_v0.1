@@ -8,24 +8,49 @@ class Controller
 
     protected $model = NULL;
 
+    protected $library = NULL;
+
     protected $helper = NULL;
 
     protected $config = NULL;
 
-    protected $library = NULL;
-
+    /*
+    Load cac thu vien can thiet
+    */
     public function __construct()
     {
-    	// Load config
-    	require_once PATH_SYSTEM . '/core/loader/ConfigLoader.php';
-    	$this->config = new ConfigLoader();
-    	$this->config->load('config');
-    	// Load library
-    	require_once PATH_SYSTEM . '/core/loader/LibraryLoader.php';
-    	$this->library = new LibraryLoader();
-    	// Load helper
-    	require_once PATH_SYSTEM . '/core/loader/HelperLoader.php';
-    	$this->helper = new HelperLoader();
+
+    }
+
+    /*
+    Ham chay ung dung
+    */
+    public function load($controller, $action)
+    {
+        // Chuyen ten controller theo dinh dang {Name}Controller
+        $controller = ucfirst(strtolower($controller)) . 'Controller';
+
+        // Kiem tra file co ton tai hay khong
+        if (!file_exists(PATH_APP . '/controller/' . $controller . '.php')) {
+            die ('File is not exists');
+        }
+
+        require_once PATH_APP . '/controller/' . $controller . '.php';
+
+        // Kiem tra class co ton tai hay khon
+        if (!class_exists($controller)) {
+            die ('Controller is not exists');
+        }
+
+        $controllerObject = new $controller();
+
+        // Kiem tra action co ton tai hay khong
+        if (!method_exists($controllerObject, $action)) {
+            die ('Action is not exists');
+        }
+
+        // Goi toi action
+        $controllerObject->{$action}();
     }
 
 }
