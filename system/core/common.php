@@ -7,8 +7,8 @@ function load()
     $config = include_once PATH_APP . '/config/init.php';
 
     // Neu khong truyen controller hoac action thi dung controller va action mac dinh
-    $controller = empty($_GET['c']) ? CONTROLLER_DEFAULT : $_GET['c'];
-    $action = empty($_GET['a']) ? ACTION_DEFAULT : $_GET['a'];
+    $controller = empty($_GET['c']) ? $config['CONTROLLER_DEFAULT'] : $_GET['c'];
+    $action = empty($_GET['a']) ? $config['ACTION_DEFAULT'] : $_GET['a'];
 
     // Chuyen ten controller theo dinh dang {Name}Controller
     $controller = ucfirst(strtolower($controller)) . 'Controller';

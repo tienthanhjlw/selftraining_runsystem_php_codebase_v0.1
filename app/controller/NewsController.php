@@ -10,6 +10,9 @@ class NewsController extends Controller
         print_r($this);
         echo '</pre>';
         print_r($this->config->item('base_url'));
+
+        $this->library->load('upload');
+        $this->library->upload->upload();
     }
 
     public function show()

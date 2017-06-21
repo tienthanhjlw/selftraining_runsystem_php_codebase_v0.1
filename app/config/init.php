@@ -1,6 +1,6 @@
 <?php
 
 return array(
-    'CONTROLLER_DEFAULT' => 'NewsController',
+    'CONTROLLER_DEFAULT' => 'News',
     'ACTION_DEFAULT' => 'index'
 );
