@@ -5,8 +5,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        echo '<h1>Hello<h1>';
-        echo '<pre>';
+
         print_r($this);
         echo '</pre>';
         print_r($this->config->item('base_url'));
@@ -19,6 +18,10 @@ class NewsController extends Controller
 
     public function show()
     {
-        echo '<h1>Show</h1>';
+        $data = array(
+            'title' => 'Hello World',
+        );
+        $this->view->load('index', $data);
+        $this->view->show();
     }
 }
