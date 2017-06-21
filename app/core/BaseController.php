@@ -6,7 +6,7 @@ class BaseController extends Controller
 {
     public function __construct()
     {
-        parent::construct();
+        parent::__construct();
     }
 
     public function loadHeader()
