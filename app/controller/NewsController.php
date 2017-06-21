@@ -1,7 +1,7 @@
 <?php
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
-class NewsController extends Controller
+class NewsController extends BaseController
 {
     public function index()
     {
@@ -22,6 +22,5 @@ class NewsController extends Controller
             'title' => 'Hello World',
         );
         $this->view->load('index', $data);
-        $this->view->show();
     }
 }
