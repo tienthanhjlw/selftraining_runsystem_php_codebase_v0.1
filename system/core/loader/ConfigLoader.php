@@ -1,16 +1,21 @@
 <?php
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
+/**
+ * Class ConfigLoader
+ */
 class ConfigLoader
 {
-    // Danh sach config
+    /**
+     * @var array: Danh sach config
+     */
     protected $config = array();
 
-    /*
-    Load config
-    @param string
-    @desc
-    */
+    /**
+     * @param $config
+     * @return
+     * @desc Load config
+     */
     public function load($config)
     {
         if (file_exists(PATH_APP . '/config/' . $config . '.php')) {
@@ -24,15 +29,23 @@ class ConfigLoader
         }
         return false;
     }
-
     /*
     Ham get config item, tham so truyen vao la ten cua item va tham so mac dinh
     */
+    /**
+     * @param $key
+     * @param string $default_val
+     * @return mixed|string
+     */
     public function item($key, $default_val = '')
     {
         return isset($this->config[$key]) ? $this->config[$key] : $default_val;
     }
 
+    /**
+     * @param $key
+     * @param $val
+     */
     public function setItem($key, $val)
     {
         $this->config[$key] = $val;

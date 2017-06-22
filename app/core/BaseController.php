@@ -2,6 +2,9 @@
 
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
+/**
+ * Class BaseController
+ */
 class BaseController extends Controller
 {
     public function __construct()

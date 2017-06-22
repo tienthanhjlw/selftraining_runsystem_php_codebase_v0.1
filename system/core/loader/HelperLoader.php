@@ -1,8 +1,15 @@
 <?php
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
+/**
+ * Class HelperLoader
+ */
 class HelperLoader
 {
+    /**
+     * @param $helper
+     * @desc Load helper
+     */
     public function load($helper)
     {
         $helper = ucfirst(strtolower($helper)) . 'Helper';

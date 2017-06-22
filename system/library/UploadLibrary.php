@@ -1,6 +1,9 @@
 <?php
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
+/**
+ * Class UploadLibrary
+ */
 class UploadLibrary
 {
     public function __construct()
