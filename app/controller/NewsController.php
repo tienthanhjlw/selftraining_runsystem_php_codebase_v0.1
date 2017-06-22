@@ -27,7 +27,7 @@ class NewsController extends BaseController
         $users = $this->model->Staff->select();
         $data = array(
             'title' => 'Helloworld',
-            'meme' => $users
+            'users' => $users
         );
         return $this->view->load('index', $data);
     }
