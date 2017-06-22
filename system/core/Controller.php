@@ -2,16 +2,34 @@
 
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
+/**
+ * Class Controller
+ */
 class Controller
 {
+    /**
+     * @var null|ViewLoader
+     */
     protected $view = NULL;
 
+    /**
+     * @var ModelLoader|null
+     */
     protected $model = NULL;
 
+    /**
+     * @var LibraryLoader|null
+     */
     protected $library = NULL;
 
+    /**
+     * @var HelperLoader|null
+     */
     protected $helper = NULL;
 
+    /**
+     * @var ConfigLoader|null
+     */
     protected $config = NULL;
 
     /**

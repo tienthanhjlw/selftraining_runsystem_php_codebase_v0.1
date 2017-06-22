@@ -13,7 +13,7 @@ class ConfigLoader
 
     /**
      * @param $config
-     * @return
+     * @return boolean
      * @desc Load config
      */
     public function load($config)
@@ -29,13 +29,12 @@ class ConfigLoader
         }
         return false;
     }
-    /*
-    Ham get config item, tham so truyen vao la ten cua item va tham so mac dinh
-    */
+
     /**
      * @param $key
      * @param string $default_val
      * @return mixed|string
+     * @desc Ham get config item, tham so truyen vao la ten cua item va tham so mac dinh
      */
     public function item($key, $default_val = '')
     {
