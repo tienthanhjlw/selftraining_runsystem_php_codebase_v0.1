@@ -18,10 +18,6 @@
             height: 150px;
             background-color: yellow;
         }
-
-        .m-0 {
-            margin: 0;
-        }
     </style>
 </head>
 <body>
@@ -30,11 +26,11 @@
 </div>
 <div id="content" class="m-0">
     <h2>Content</h2>
-    <?php
-    foreach ($users as $user) {
-        echo '<h3 style="color: beige">' . $user['name'] . '</h3>';
-    }
-    ?>
+    <form action="" method="post">
+        <p>Name</p>
+        <input type="text" placeholder="Name">
+        <button type="submit">Send</button>
+    </form>
 </div>
 <div id="footer" class="m-0">
     <h2>Footer</h2>

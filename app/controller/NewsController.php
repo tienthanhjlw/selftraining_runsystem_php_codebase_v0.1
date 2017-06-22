@@ -23,9 +23,20 @@ class NewsController extends BaseController
      */
     public function show()
     {
+        $this->model->load('Staff');
+        $users = $this->model->Staff->select();
         $data = array(
-            'title' => 'Hello World',
+            'title' => 'Helloworld',
+            'meme' => $users
         );
         return $this->view->load('index', $data);
+    }
+
+    public function create()
+    {
+        $data = array(
+            'title' => 'Create'
+        );
+        return $this->view->load('create', $data);
     }
 }
