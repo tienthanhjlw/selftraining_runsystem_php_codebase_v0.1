@@ -69,4 +69,12 @@ class Controller
         require_once PATH_SYSTEM . '/core/loader/ModelLoader.php';
         $this->model = new ModelLoader();
     }
+
+    /**
+     * @desc Load View
+     */
+    public function __destruct()
+    {
+        $this->view->show();
+    }
 }

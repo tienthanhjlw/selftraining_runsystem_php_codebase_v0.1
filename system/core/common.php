@@ -35,13 +35,6 @@ function load()
     require_once PATH_SYSTEM . '/core/Controller.php';
 
     /**
-     * @desc Load BaseController
-     */
-    if (file_exists(PATH_APP . '/core/BaseController.php')) {
-        include_once PATH_APP . '/core/BaseController.php';
-    }
-
-    /**
      * @desc Include controller con
      */
     require_once PATH_APP . '/controller/' . $controller . '.php';

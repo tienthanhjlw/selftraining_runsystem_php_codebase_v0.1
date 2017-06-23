@@ -4,7 +4,7 @@ if (!defined('PATH_SYSTEM')) die ('Bad request');
 /**
  * Class NewsController
  */
-class HomeController extends BaseController
+class HomeController extends Controller
 {
     /**
      * @return ViewLoader
