@@ -1,13 +1,20 @@
 <?php
 
-// Dinh nghia duong dan he thong
+/**
+ * @desc Dinh nghia duong dan he thong
+ */
 define('PATH_SYSTEM', __DIR__ . '/system');
 define('PATH_APP', __DIR__ . '/app');
+define('PATH_PUBLIC', __DIR__ . '/public');
 
-// Lay thong so cau hinh
+/**
+ * @desc Lay thong so cau hinh
+ */
 require(PATH_SYSTEM . '/config/config.php');
 
-// Include file common.php, file common chua ham load() chay he thong
+/**
+ * @desc Include file common.php, file common chua ham load() chay he thong
+ */
 include_once PATH_SYSTEM . '/core/common.php';
 
 load();

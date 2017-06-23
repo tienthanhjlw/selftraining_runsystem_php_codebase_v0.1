@@ -11,5 +11,6 @@ class Staff extends Model
      * @var string
      */
     protected $table = 'staffs';
+    protected $fillable = ['name'];
 
 }

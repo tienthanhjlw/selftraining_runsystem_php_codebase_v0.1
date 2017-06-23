@@ -1,7 +1,6 @@
 <?php
 if (!defined('PATH_SYSTEM')) die ('Bad request');
 
-
 /**
  * @param $str
  * @return string
